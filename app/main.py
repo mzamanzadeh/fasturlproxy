@@ -21,7 +21,7 @@ async def root(req:Item):
             method=req.method,
             url=req.url,
             data=req.data,
-            json=req.json,
+            json=req.jsonn,
             timeout=req.timeout,
             headers=req.headers
         )
