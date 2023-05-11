@@ -1,3 +1,5 @@
+import traceback
+
 from fastapi import FastAPI
 import requests
 from pydantic import BaseModel
@@ -25,5 +27,5 @@ async def root(req:Item):
         )
         return {'status_code':res.status_code,'json':res.json()}
     except:
-        return -1,[]
+        return traceback.format_exc()
 
