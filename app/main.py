@@ -7,10 +7,10 @@ app = FastAPI()
 class Item(BaseModel):
     url: str
     method: str
-    data: str
-    jsonn: str
-    timeout: int
-    headers : dict
+    data: str = None
+    jsonn: str = None
+    timeout: int = 5
+    headers : dict = None
 
 @app.post("/send")
 async def root(req:Item):
